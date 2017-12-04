@@ -1,0 +1,10 @@
+{
+    serverBaseUrl: 'https://nips17.ml/couchdb',
+    collections: {
+        'originalSchedule': '/schedule_nips2017',
+        'papers': '/papers_nips2017',
+        'authors': '/authors_nips2017',
+        'topics': '/topic_clusters_nips2017',
+        'newSchedule': '/schedule'
+    }
+}
