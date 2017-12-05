@@ -183,9 +183,16 @@ function addInvitedTalksAsPapers(sessions, items, people) {
 
                         newItem.title = s_content.title;
                         newItem.description = s_content.abstract;
-                        newItem.authors = s_content.authors;
-                        newItem.authorIds = [s_content.authors[0].author_id];
-                        newItem.authorsString = s_content.authors[0].author;
+                        if(s_content.authors == {}) {
+                            newItem.authors = [];
+                            newItem.authorIds = [];
+                            newItem.authorsString = "";
+                        }
+                        else {
+                            newItem.authors = s_content.authors;
+                            newItem.authorIds = [s_content.authors[0].author_id];
+                            newItem.authorsString = s_content.authors[0].author;
+                        }
 
                         newItem.oral_session = {
                             type: "Invited Talk",
